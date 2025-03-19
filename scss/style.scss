@@ -1,0 +1,239 @@
+@mixin d-flex {
+    display: flex;
+    align-items: center;
+}
+@mixin title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 400vh;
+}
+
+.container{
+    width: 1700px;
+    margin: 0 auto;
+}
+.bx-shopping-bag{
+    font-size: 25px;
+}
+.bx-heart{
+    font-size: 25px;
+}
+.bx-user{
+    font-size: 25px;
+}
+.header{
+    margin-top: 20px;
+    &__nav{
+        @include d-flex();
+        justify-content: space-around;
+        gap: 350px;
+    }
+    &__imgBox{
+        @include d-flex();
+        gap: 20px;
+    }
+    &__logo{
+        font-size: 32px;
+        color: #750000;
+    }
+    &__text{
+        font-size: 14px;
+        color: #750000;
+    }
+    &__iconBox{
+        display: flex;
+        gap: 20px;
+    }
+    &__parag{
+        font-size: 16px;
+        color: #750000;
+    }
+    &__img{
+        width: 80px;
+    }
+    &__line{
+        width: 1050px;
+        margin: 20px auto;
+        height: 3px;
+        background-color: #750000;
+        border: none;
+        opacity: 1;
+        border-radius: 10px;
+
+    }
+        
+}
+
+.product{
+    margin-top: 50px;
+
+    &__general{
+        @include d-flex();
+        justify-content: space-around;
+        border: 4px solid #750000;
+        border-radius: 50px;
+        width: 1000px;
+        height: 500px;
+        margin: 0 120px;
+    }
+    &__rightBox{
+        background-color: #750000;
+        width: 380px;
+        height: 500px;
+        padding: 220px 20px;
+        margin-right: 100px;
+        position: absolute;
+        left: 570px;
+    }
+    &__img{
+        width: 345px;
+        height: 500px;
+        margin-left: 580px;
+    }
+    &__title{
+        position: relative;
+        left: 180px;
+        font-size: 46px;
+        color: #750000;
+    }
+    &__title2{
+        font-size: 46px;
+        color: white;
+    }
+    &__link{
+        text-decoration: none;
+        font-size: 14px;
+        color: white;
+        margin-left: 80px;
+    }
+    &__line{
+        width: 130px;
+        margin-left: 80px;
+        height: 3px;
+        background-color: white;
+        border: none;
+        opacity: 1;
+        border-radius: 10px;
+    }
+    
+}
+
+.card{
+    margin-top: 80px;
+    &__title{
+        font-size: 32px;
+        margin-left: 120px;
+        margin-bottom: 30px;
+        color: #750000;
+    }
+    &__general{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        margin-left: 120px;
+    }
+    &__img{
+        width: 280px;
+        margin-left: -20px;
+        margin-top: -20px;
+        margin-bottom: 10px;
+    }
+    &__box{
+        border: 1px solid gainsboro;
+        border-radius: 30px;
+        width: 282px;
+        height: 530px;
+        margin-bottom: 50px;
+        padding: 20px;
+        transition: all .5s ease;
+    }
+    &__btnBox{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__subject{
+        font-size: 20px;
+        color: #750000;
+    }
+    &__text{
+        font-size: 16px;
+        color: #750000;
+    }
+    &__parag{
+        font-size: 18px;
+        color: gray;
+    }
+    &__span{
+        font-size: 26px;
+
+    }
+    &__btn{
+        font-size: 44px;
+        padding: 0 15px 2px;
+        color: #750000;
+        border: 2px solid #750000;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: all .5s ease;
+    }
+}
+.card__box:hover{
+    transform: translateX(-10px) translateY(-10px);
+    box-shadow: 2px 2px 5px 2px #750000;
+}
+.card__btn:hover{
+    color: white;
+    background-color: #750000;
+}
+
+.footer{
+    background-color: #750000;
+    width: 100%;
+    height: 300px;
+    padding: 40px;
+    &__general{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 500px;
+    }
+    &__subject{
+        font-size: 18px;
+        color: white;
+        margin-bottom: 15px;
+    }
+    &__list{
+        margin-left: -30px;
+        color: white;
+    }
+    &__item{
+        margin-bottom: 5px;
+    }
+
+}
+.bxl-facebook-circle{
+    font-size: 30px;
+}
+.bxl-instagram{
+    font-size: 30px;
+}
+.bxl-telegram{
+    font-size: 30px;
+}
+.bxl-figma{
+    font-size: 30px;
+}
